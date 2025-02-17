@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // can contains any type of data
+      // can cointains any number of elements
+      // can contains duplicated elements
+      // can be non sequential
+      const salaries = [100_000, 200_000, 300_000]
+      // const salaries = new Array([100_000, 200_000, 300_000])
+      // salaries = [1_000_000, 2_000_000, 3_000_000]
+      salaries.push(400_000)
+      console.log(salaries)
+      salaries.push('Ötszázezer')
+      console.log(salaries)
+      salaries.push(400_000)
+      console.log(salaries)
+      salaries[1000] = 1000
+      console.log(salaries)
+      console.log(salaries.length)
+
+      salaries.pop()
+      console.log(salaries)
+
+      salaries.shift()
+      console.log(salaries)
+
+      salaries.unshift(100_000)
+      console.log(salaries)
+
+      console.log(salaries.indexOf(200_000))
+      salaries.reverse()
+      console.log(salaries)
+
+      const seqential = [1, 2, 3, 4, 5]
+      const subArray = seqential.slice(1, 3)
+      console.log(subArray)
+      console.log(seqential)
+
+      const splitted = seqential.splice(1, 2)
+      console.log(splitted)
+      console.log(seqential)
+
+      const randoms = [1, 3, 435, 23, 234, 5, 2, 1, 1, 35, 4, 565]
+      randoms.sort() // sort as strings
+      console.log(randoms)
+
+      const names = ['Zsolt', 'Ági', 'Béla', 'Ádám', 'Ábel', 'Ödön', 'Abigél', 'Ond'] // hungarian letters caouse non expected problems
+      names.sort()
+      console.log(names)
+    </script>
+  </body>
+</html>

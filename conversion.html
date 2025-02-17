@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let vat = '27'
+      let vatNumber = parseInt(vat, 10)
+
+      let dicount = '15.5'
+      let discountNumber = parseFloat(dicount)
+      console.log(discountNumber)
+
+      let dicounNumberInt = parseInt(dicount, 10)
+      console.log(dicounNumberInt)
+
+      console.log(parseInt('Hello2.2ollé11', 10))
+      console.log(parseInt('2.2ollé11', 10))
+      console.log(parseFloat('2.2ollé11'))
+
+      console.log(Number('Hello2.2ollé11'))
+      console.log(Number('2.2'))
+      console.log(Number('2'))
+
+      let num = 10.1
+      console.log(num.toString(), typeof num.toString())
+      console.log(num.toString(), typeof num.toString())
+
+      console.log(Number(true))
+      console.log(Number(false))
+
+      console.log(Boolean(0)) // false
+      console.log(Boolean(1)) // true
+      console.log(Boolean(-1)) // true, all not 0 value is true
+
+      console.log(Boolean('')) // false
+      console.log(Boolean(' ')) // true, all not empty string is true
+
+      let isAvailable = true
+      console.log(String(isAvailable))
+    </script>
+  </body>
+</html>

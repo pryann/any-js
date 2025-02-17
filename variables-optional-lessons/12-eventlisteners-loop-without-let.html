@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button class="click-me">Click me PLÍÍÍÍZ!</button>
+    <button class="click-me">Click me PLÍÍÍÍZ!</button>
+    <button class="click-me">Click me PLÍÍÍÍZ!</button>
+
+    <script>
+      'use strict';
+
+      function clickHandler(i) {
+        elements[i].addEventListener('click', function () {
+          console.log('item: ' + i);
+        })
+      }
+
+      var elements = document.querySelectorAll('.click-me');
+      for (var i = 0; i < elements.length; i += 1) {
+        clickHandler(i);
+      }
+
+    </script>
+  </body>
+
+</html>

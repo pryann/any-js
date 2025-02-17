@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text--red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hello</p>
+    <p>Csáó</p>
+    <p>
+      <span>Hola</span>
+      <span>Dona</span>
+    </p>
+
+    <script>
+      // use any css selector
+      const paragraphs = document.querySelectorAll('p')
+      console.log(paragraphs)
+
+      paragraphs[0].textContent = 'Hello World'
+      // paragraphs[2].textContent = '<strong>Hola</strong> Dona'
+      paragraphs[2].innerHTML = '<strong>Hola</strong> Dona'
+      // add inline style
+      paragraphs[0].style.color = 'red'
+      paragraphs[1].classList.add('text--red')
+
+      for(let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.fontSize = `${i * 10 + 10}px`
+      }
+    </script>
+  </body>
+</html>

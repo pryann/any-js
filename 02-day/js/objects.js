@@ -65,6 +65,7 @@ console.log(increaseSalary(salary, 20))
 console.log(salary)
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// shallow copy
 const numbersCopy = [...numbers]
 numbers.push(11)
 console.log(numbers, numbersCopy)

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // function logPerson({ firstName = 'John', lastName = 'Doe', age = 33 } = {}) {
+      //   console.log(`My name is ${firstName} ${lastName} and I am ${age} years old.`)
+      // }
+
+      // logPerson({ age: 22 })
+      // logPerson()
+
+      const person = {
+        firstName: 'John',
+      }
+
+      function logPerson() {
+        const { firstName = 'John', lastName = 'Doe', age = 33 } = person || {}
+        console.log(`My name is ${firstName} ${lastName} and I am ${age} years old.`)
+      }
+    </script>
+  </body>
+</html>

@@ -31,3 +31,26 @@
 - A függvény visszaadja az adott illető adatait az adott formátumban: 
   *My name is firstName lastName. I'm age years old.*  
 - A `firstName`, `lastName` és `age` helyére a paraméterként kapott objektumtulajdonságok értékét kell behelyettesíteni!
+
+
+## 4. feladat
+Írj egy olyan függvénykifejezést `sumNetPrices` néven, amely paraméterként vár egy egész számokat tartalmazó tömböt!   
+A függvény szorozza meg a tömbelemek értékét 1.27-tel, majd pedig térjen vissza az elemek összegével!
+
+## 5. feladat
+Írj egy olyan függvénykifejezést `templateFactory` néven, amely paraméterként egy string-eket tartalmazó tömböt kap, és visszaad 
+egy HTML-template-et (string)!
+A HTML-template egy felsorolt lista, amelynek a listaelemei a kapott tömb értékeit tartalmazzák.  
+Pl.:
+
+```JavaScript
+// ha ez a tömb
+const content = ['első', 'második', 'harmadik'];
+
+// akkor ez legyen a visszatérési érték:
+<ul>
+    <li>első</li>
+    <li>második</li>
+    <li>harmadik</li>
+</ul>
+```

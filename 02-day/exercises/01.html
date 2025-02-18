@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button class="button">ELső</button>
+    <button class="button">Második</button>
+    <button class="button">Harmadik</button>
+  </body>
+
+  <script>
+    const log = (text) => {
+      console.log(text)
+    }
+
+    const handleClick = (buttons) => {
+      for (let button of buttons) {
+        button.addEventListener('click', () => log(button.textContent))
+      }
+    }
+
+    const buttons = document.querySelectorAll('.button')
+    handleClick(buttons)
+
+    // IIFE
+    // const handleClick = (() => {
+    //   const buttons = document.querySelectorAll('.button')
+    //   for (let button of buttons) {
+    //     button.addEventListener('click', () => {
+    //       console.log(button.textContent)
+    //     })
+    //   }
+    // })()
+  </script>
+</html>

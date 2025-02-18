@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1 id="main-header">Header</h1>
+    <p class="lead">Lead</p>
+    <p>text</p>
+    <ul>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ul>
+
+    <script>
+      // can use any css selector
+      // 'div p.lead strong .text-danger'
+      const header = document.querySelector('#main-header')
+      console.log(header)
+      console.log(header.textContent)
+
+      const lead = document.querySelector('.leader')
+      console.log(lead) // null
+
+      const paragraph = document.querySelector('p')
+      console.log(paragraph)
+
+      // NodeList != Array
+      const listItems = document.querySelectorAll('li')
+      console.log(listItems)
+      console.log(typeof listItems)
+      console.log(typeof listItems[0])
+    </script>
+  </body>
+</html>

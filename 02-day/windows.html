@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="text" name="firstName" placeholder="John" id="firstName" value="John" />
+    <button id="saveFirstName" type="button">Save</button>
+
+    <script>
+      const saveFirstNameButton = document.querySelector('#saveFirstName')
+
+      function saveFirstName() {
+        const firstNameInput = document.querySelector('#firstName')
+        const isConfirmed = confirm('Are you sure you want to save the first name?')
+        if (isConfirmed) {
+          console.log(firstNameInput.value)
+        }
+      }
+      
+
+      function logEventTriggered() {
+        console.log('Event triggered')
+      }
+
+      saveFirstNameButton.addEventListener('click', saveFirstName)
+      saveFirstNameButton.addEventListener('click', logEventTriggered)
+
+      // manual trigger event
+      // saveFirstNameButton.click()
+
+      saveFirstNameButton.removeEventListener('click', saveFirstName)
+
+      // send to server
+      // REST
+      // POST /users
+      // GET /users
+      // GET /users/1
+
+      // person -> people
+      // knife ->knives
+      // address ->addresses
+    </script>
+  </body>
+</html>

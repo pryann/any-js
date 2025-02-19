@@ -6,3 +6,23 @@
 - Írj két függvényt `getSumOfTheElements` és `getAverageOfTheElements` néven.  
   A `getSumOfTheElements` visszaadja a paraméterként kapott csak egész számokat tartalmazó tömb összegét!  
   A `getAverageOfTheElements` visszaadja a paraméterként kapott csak egész számokat tartalmazó tömb átlagát! Használd fel a `getSumOfTheElements` függvényt!
+
+1. Adott az alábbi objektum:
+```javascript
+    const user = {
+        firstName: 'John',
+        lastName: 'Doe'
+    };
+```
+Mentsd el külön lastName, firstName, és job változókba a fenti objektum property-jeit!   
+Ha valamelyik nincs megadva, akkor az érték legyen a "unknown" string!
+
+2. Adott az alábbi objektum:
+```javascript
+    const user = {
+        firstName: 'John',
+        lastName: 'Doe'
+    };
+```
+Ments el külön `l`, `f`, és `j` változókba a fenti objektum lastName, firstName, és job property-jeit! 
+Ha valamelyik nincs megadva, akkor az érték legyen a "unknown" string!

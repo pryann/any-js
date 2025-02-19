@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      const users = [
+        { id: 1, firstName: 'Henryetta', lastName: 'Capper', email: 'hcapper0@blinklist.com' },
+        { id: 2, firstName: 'Rodi', lastName: 'Samme', email: 'rsamme1@whitehouse.gov' },
+        { id: 3, firstName: 'Pietrek', lastName: 'Mulleary', email: 'pmulleary2@wikimedia.org' },
+        { id: 4, firstName: 'Bryce', lastName: 'Basillon', email: 'bbasillon3@w3.org' },
+        { id: 5, firstName: 'Terrill', lastName: 'Mottershaw', email: 'tmottershaw4@nydailynews.com' },
+      ]
+
+      // example: simulate server response
+      const getUsers = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(users)
+        }, 2000)
+      })
+
+      // getUsers
+      //   .then((users) => {
+      //     console.log(users)
+      //   })
+      //   .then(() => {
+      //     console.log('All users are fetched')
+      //   })
+
+      console.log('START')
+
+      // async function fetchUsers() {
+      //   const users = await getUsers
+      //   console.log(users)
+      //   console.log('All users are fetched')
+      //   return users
+      // }
+
+      async function fetchUsers() {
+        const users = await getUsers
+        return users
+      }
+
+      const userList = fetchUsers()
+      console.log(userList)
+
+      console.log('STOP')
+    </script>
+  </body>
+</html>

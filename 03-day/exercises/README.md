@@ -27,7 +27,7 @@ Ha valamelyik nincs megadva, akkor az érték legyen a "unknown" string!
 Ments el külön `l`, `f`, és `j` változókba a fenti objektum lastName, firstName, és job property-jeit! 
 Ha valamelyik nincs megadva, akkor az érték legyen a "unknown" string!
 
-3. Készíts egy `HU` nevű objektumot, aminek az alábbi propertijei vannak: (Intl objectet használd)
+3. Készíts egy `HU` nevű objektumot, aminek az alábbi propertijei vannak: (saját objectum 3 metódussal, Intl objectet használd ahol kell)
 - `date()`: Visszaadja a paraméterként megadott dátumot a magyar dátumírás szabályainak megfelelően
 - `currency()`: Visszaadja a paraméterként megadott számot a magyar pénzformátumnak megfelelően a Ft végződéssel együtt
 - `list()`: A paraméterként kapott string tömböt visszaadja az alábbi formában: első, második és harmadik" (Tehát vesszőkkel elválasztva az utolsó elem előtt az és szóval)

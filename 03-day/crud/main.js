@@ -1,3 +1,3 @@
-import { renderTable } from './users.js'
+import { renderUserTable } from './users-refactored.js'
 
-renderTable()
+renderUserTable()

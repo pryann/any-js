@@ -19,6 +19,7 @@
         <h2 class="me-3">Users table</h2>
         <table id="users" class="table table-striped">
           <thead>
+            <th>Id</th>
             <th>First name</th>
             <th>Last name</th>
             <th>Email</th>
@@ -28,6 +29,58 @@
         </table>
       </div>
     </main>
+
+    <!-- Delete Confirm Modal -->
+    <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-labelledby="deleteUserModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="deleteUserModalLabel">User delete confirmation</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure? User will remove permanently!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-danger" id="deleteUser">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Update User Modal -->
+    <div class="modal fade" id="updateUserModal" tabindex="-1" aria-labelledby="updateUserModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="updateUserModalLabel">Update User</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <input type="hidden" name="id" id="id" />
+              <div class="mb-3">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" />
+              </div>
+              <div class="mb-3">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" />
+              </div>
+              <div class="mb-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" id="updateUser">Save modification</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="main.js" type="module"></script>
   </body>

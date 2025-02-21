@@ -1,4 +1,4 @@
-const usersUrl = 'http://localhost:3000/users'
+const usersUrl = 'http://localhost:3000/userss'
 
 // Create: POST http://localhost:3000/users
 // Read:   (all) GET http://localhost:3000/users,
@@ -35,4 +35,14 @@ export async function updateUser(id, user) {
   return updatedUser.json()
 }
 
-export async function createUser(user) {}
+export async function createUser(user) {
+  const newUser = await fetch(usersUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(user),
+  })
+
+  return newUser.json()
+}

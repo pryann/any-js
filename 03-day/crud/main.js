@@ -1,3 +1,4 @@
-import { renderUserTable } from './users-refactored.js'
+import { handleCreate, renderUserTable } from './users-refactored.js'
 
 renderUserTable()
+handleCreate()

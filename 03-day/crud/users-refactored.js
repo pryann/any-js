@@ -1,11 +1,14 @@
-import { fetchUsers, removeUser, findUser, updateUser } from './api.js'
+import { fetchUsers, removeUser, findUser, updateUser, createUser } from './api.js'
 
 const selectors = {
   deleteModal: '#deleteUserModal',
   updateModal: '#updateUserModal',
+  createModal: '#createUserModal',
   updateForm: '#updateUserModal form',
+  createForm: '#createUserModal form',
   updateButton: '#updateUser',
   deleteButton: '#deleteUser',
+  createButton: '#createUser',
   usersTableBody: '#users tbody',
   editButtons: '.edit-user',
   deleteButtons: '.delete-user',
@@ -16,6 +19,7 @@ const userFields = ['id', 'firstName', 'lastName', 'email']
 const modals = {
   delete: new bootstrap.Modal(document.querySelector(selectors.deleteModal)),
   update: new bootstrap.Modal(document.querySelector(selectors.updateModal)),
+  create: new bootstrap.Modal(document.querySelector(selectors.createModal)),
 }
 
 // UI Generation
@@ -63,7 +67,7 @@ async function handleDelete(id) {
 function attachUpdateHandler() {
   const updateButton = document.querySelector(selectors.updateButton)
   updateButton.onclick = async () => {
-    const userData = getEditUserFormData()
+    const userData = getFormData(selectors.updateForm)
     const updatedUser = await updateUser(userData.id, userData)
     updateUserRow(updatedUser)
     modals.update.hide()
@@ -76,8 +80,8 @@ function fillEditUserFormData(user) {
   userFields.forEach((field) => (form[field].value = user[field]))
 }
 
-function getEditUserFormData() {
-  const form = document.querySelector(selectors.updateForm)
+function getFormData(formSelector) {
+  const form = document.querySelector(formSelector)
   return Object.fromEntries(new FormData(form))
 }
 
@@ -94,9 +98,20 @@ function generateUserTable(users) {
   return fragment
 }
 
-// Main Export
+export function handleCreate() {
+  document.querySelector(selectors.createButton).onclick = async () => {
+    const userData = getFormData(selectors.createForm)
+    const newUser = await createUser(userData)
+    const userRow = generateUserRow(newUser)
+    document.querySelector(selectors.usersTableBody).appendChild(userRow)
+    document.querySelector(selectors.createForm).reset()
+    modals.create.hide()
+  }
+}
+
 export async function renderUserTable() {
   const users = await fetchUsers()
+  console.log('USers fetched:', users)
   const table = document.querySelector(selectors.usersTableBody)
   table.innerHTML = ''
   table.appendChild(generateUserTable(users))

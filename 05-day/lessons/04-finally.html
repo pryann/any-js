@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            'use strict';
+
+            const jsonData = `
+                {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "age": 30
+                }
+            `;
+
+            try {
+                const user = JSON.parse(jsonData);
+                if (!user.firstName || !user.lastName || !user.age) {
+                    throw new ReferenceError('Missing property');
+                }
+            } catch (error) {
+                if (error instanceof ReferenceError) {
+                    console.error('Custom Error: ', error.message);
+                } else if (error instanceof SyntaxError) {
+                    console.error('Szintaktikai hiba');
+                } else {
+                    console.error(error.message);
+                }
+            } finally {
+                console.log('Parse ready');
+            }
+
+            // try {
+
+            // } catch (error) {
+
+            // }
+            // try {
+
+            // } catch (error) {
+
+            // } catch (error) {
+
+            // }
+
+        </script>
+    </body>
+
+</html>
